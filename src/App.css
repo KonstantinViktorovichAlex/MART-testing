@@ -1,0 +1,8 @@
+.App {
+  background-color:#D9DBDA;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.app-body {
+  display: flex;
+}
