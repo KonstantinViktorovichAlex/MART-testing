@@ -1,24 +1,43 @@
 import React, {Component} from 'react'
-import {Button, Form, FormGroup, Label, Input} from 'reactstrap'
+import {Form, Button } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookmark, faEdit } from '@fortawesome/free-solid-svg-icons'
 
+
+
 import './ticket.css'
+import FirstGroupe from './FormGroupe/FirstGroupe/FirstGroupe'
+import CustomInput from '../../components/input/CustomInput'
 
 export default class Ticket extends Component {
     render(){
         return(
             <div className = 'ticket'>
-                <div className = 'header'>
-                    <div className = 'header-info'>
-                        <FontAwesomeIcon icon = {faBookmark}/>
-                        <p className = 'ticket-text'>Тикет №006247</p>
+                <Form>
+                    <div className = 'header'>
+                        <div className = 'header-info'>
+                            <FontAwesomeIcon icon = {faBookmark}/>
+                            <p className = 'ticket-text'>Тикет №006247</p>
+                        </div>
+                        <div className = 'buttons-groupe'>
+                            <Button variant = 'primary' className ='next'><FontAwesomeIcon icon = {faEdit}/>Следущее действие</Button>
+                            <Button variant = 'success' className = 'save'>Сохранить</Button>
+                        </div>
                     </div>
-                    <div className = 'buttons-groupe'>
-                        <Button color = 'primary' className ='next'><FontAwesomeIcon icon = {faEdit}/>Следущее действие</Button>
-                        <Button color = 'success' className = 'save'>Сохранить</Button>
-                    </div>
-                </div>
+                    <FirstGroupe/>
+                    <CustomInput label = 'Источник' controlId = 'source' control = 'select' options = {['Звонок', 'Обращение', 'Письмо']}/>
+                </Form>
+            </div>
+        )
+    }
+}
+
+ {/* <Form.Group controlId="exampleForm.ControlTextarea1">
+                        <Form.Label>Example textarea</Form.Label>
+                        <Form.Control as="textarea" rows="3" />
+                    </Form.Group> */}
+
+{/* 
                 <div className = 'body-ticket'>
                     <div className = 'form-groupe'> 
                         <Form className = 'body-form'>
@@ -78,8 +97,4 @@ export default class Ticket extends Component {
                             </FormGroup>
                         </Form>
                     </div>
-                </div>
-            </div>
-        )
-    }
-}
+                </div> */}

@@ -1,0 +1,11 @@
+.first-items {
+    display: flex;
+    width: 1100px;
+    background-color: aqua;
+    margin: 0 auto;
+    justify-content: space-around;
+}
+
+.form-group {
+    width: 300px;
+}

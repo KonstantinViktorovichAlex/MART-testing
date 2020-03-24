@@ -10,7 +10,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheckCircle, faEdit, faSearch } from '@fortawesome/free-solid-svg-icons'
 
 const Contract = (props) => {
-    console.log(props)
 
     let connect = null
 
