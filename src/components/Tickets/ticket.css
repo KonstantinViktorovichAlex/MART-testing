@@ -1,3 +1,9 @@
+.ticket{
+    background-color: #D9EDF6;
+    height: 400px;
+    border-radius: 5px;
+    border:1px solid #347ab6;
+}
 .header {
     display: flex;
     align-items: center;
@@ -8,57 +14,32 @@
     padding-left: 30px;
     padding-right: 30px;
     color: white;
+    margin-bottom: 25px;
+}
+.next {
+    margin-right: 10px;
 }
 .header-info {
     display: flex;
     width: 150px;
     justify-content: space-between;
 }
-.next {
-    margin-right: 7px;
-}
-
-/* .form-groupe {
+.first-groupe {
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 90%;
-    background-color: #D9EDF6;
     margin: 0 auto;
-    height: 500px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    border:1px solid #347ab6;
-    padding-left: 50px;
-    padding-right: 50px;
-} */
-
-.body-form {
-    height: 260px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
 }
-
-
-.problem {
+.second-groupe{
     display: flex;
-    align-items: center;
-    width: 100%;
-    justify-content: center;
-}
-
-
-.first-items {
-    display: flex;
-    width: 1100px;
-    background-color: aqua;
     margin: 0 auto;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
 }
-
-.form-group {
-    width: 300px;
+.text {
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
 }

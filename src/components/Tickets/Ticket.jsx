@@ -3,12 +3,9 @@ import {Form, Button } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookmark, faEdit } from '@fortawesome/free-solid-svg-icons'
 
-
-
 import './ticket.css'
-import FirstGroupe from './FormGroupe/FirstGroupe/FirstGroupe'
-import CustomInput from '../../components/input/CustomInput'
 
+import CustomInput from '../../components/input/CustomInput'
 export default class Ticket extends Component {
     render(){
         return(
@@ -24,77 +21,68 @@ export default class Ticket extends Component {
                             <Button variant = 'success' className = 'save'>Сохранить</Button>
                         </div>
                     </div>
-                    <FirstGroupe/>
-                    <CustomInput label = 'Источник' controlId = 'source' control = 'select' options = {['Звонок', 'Обращение', 'Письмо']}/>
+                        <div className = 'first-groupe'>
+                            <CustomInput 
+                                label = 'Источник' 
+                                controlId = 'source' 
+                                control = 'select' 
+                                options = {['Звонок', 'Обращение', 'Письмо']}
+                                width = {300}
+                                classes = {'myClass'}
+                            />
+                            <CustomInput 
+                                label = 'Статус' 
+                                controlId = 'status' 
+                                control = 'select' 
+                                options = {['Новый', 'Старый', 'Неизвестно']}
+                                width = {300}
+                                classes = {'myClass'}
+                            />
+                            <CustomInput 
+                                label = 'Ответсвенный' 
+                                controlId = 'responsible' 
+                                control = 'select' 
+                                options = {['Вар1', 'Вар2', 'Вар3']}
+                                width = {300}
+                                classes = {'myClass'}
+                            />
+                        </div>
+                        <div className = 'second-groupe'>
+                            <CustomInput 
+                                label = 'Тип' 
+                                controlId = 'type' 
+                                control = 'select' 
+                                options = {['IPoE', 'PPPoE', 'IP адреса']}
+                                width = {300}
+                                classes = {'myClass'}
+                            />
+                            <CustomInput 
+                                label = 'Приоритет' 
+                                controlId = 'priority' 
+                                control = 'select' 
+                                options = {['Средний', 'Высокий','Стандарт']}
+                                width = {300}
+                                classes = {'myClass'}
+                            />
+                            <CustomInput 
+                                label = 'Крайний срок' 
+                                controlId = 'date' 
+                                control = 'select' 
+                                options = {['Звонок', 'Обращение', 'Письмо']}
+                                width = {300}
+                                classes = {'myClass'}
+                            />
+                        </div>
+                        <div className = 'text'>
+                            <CustomInput 
+                                label = 'Проблема' 
+                                controlId = 'problem' 
+                                control = 'textarea' 
+                                classes = {'textproblem'}
+                            />
+                        </div>
                 </Form>
             </div>
         )
     }
 }
-
- {/* <Form.Group controlId="exampleForm.ControlTextarea1">
-                        <Form.Label>Example textarea</Form.Label>
-                        <Form.Control as="textarea" rows="3" />
-                    </Form.Group> */}
-
-{/* 
-                <div className = 'body-ticket'>
-                    <div className = 'form-groupe'> 
-                        <Form className = 'body-form'>
-                            <FormGroup>
-                                <Label for="source">Источник</Label>
-                                <Input type="select" name="select" id="source">
-                                    <option>Звонок</option>
-                                    <option>Обращение</option>
-                                    <option>Письмо</option>
-                                </Input>
-                            </FormGroup>
-                            <FormGroup>
-                                <Label for="typeConnect">Тип</Label>
-                                    <Input type="select" name="select" id="typeConnect" onChange = {this.props.toggleValue}>
-                                        <option>IPoE</option>
-                                        <option>PPPoE</option>
-                                        <option>IP</option>
-                                    </Input>
-                            </FormGroup>
-                            <FormGroup>
-                                <Label for="status">Статус</Label>
-                                    <Input type="select" name="select" id="status">
-                                        <option>Новый</option>
-                                        <option>Старый</option>
-                                        <option>Древний</option>
-                                    </Input>
-                            </FormGroup>
-                            <FormGroup>
-                                <Label for="priority">Приоитет</Label>
-                                    <Input type="select" name="select" id="priority">
-                                        <option>Важный</option>
-                                        <option>Средний</option>
-                                        <option>вообще делать не надо</option>
-                                    </Input>
-                            </FormGroup>
-                            <FormGroup>
-                                <Label for="responsible">Ответственный</Label>
-                                    <Input type="select" name="select" id="responsible">
-                                        <option>чел с района</option>
-                                        <option>Работник кухни</option>
-                                        <option>неизвестно</option>
-                                    </Input>
-                            </FormGroup>
-                            <FormGroup>
-                                <Label for="deadline">Крайний срок</Label>
-                                <Input
-                                    type="date"
-                                    name="date"
-                                    id="deadline"
-                                />
-                            </FormGroup>
-                        </Form>
-                        <Form className = 'problem'>
-                            <FormGroup className = 'last-elem'>
-                                <Label for="propblem">Проблема</Label>
-                                <Input type="textarea" name="text" id="problem"/>
-                            </FormGroup>
-                        </Form>
-                    </div>
-                </div> */}
