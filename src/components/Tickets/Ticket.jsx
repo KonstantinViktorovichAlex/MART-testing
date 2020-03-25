@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import {Form, Button } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookmark, faEdit } from '@fortawesome/free-solid-svg-icons'
-
+import {FormGroup, Label, Input } from 'reactstrap';
 import './ticket.css'
 
 import CustomInput from '../../components/input/CustomInput'
@@ -64,14 +64,14 @@ export default class Ticket extends Component {
                                 width = {300}
                                 classes = {'myClass'}
                             />
-                            <CustomInput 
-                                label = 'Крайний срок' 
-                                controlId = 'date' 
-                                control = 'select' 
-                                options = {['Звонок', 'Обращение', 'Письмо']}
-                                width = {300}
-                                classes = {'myClass'}
-                            />
+                            <FormGroup>
+                                <Label for="Date">Крайний срок</Label>
+                                <Input
+                                    type="date"
+                                    name="date"
+                                    id="Date"
+                                />
+                            </FormGroup>
                         </div>
                         <div className = 'text'>
                             <CustomInput 
@@ -82,6 +82,7 @@ export default class Ticket extends Component {
                             />
                         </div>
                 </Form>
+                
             </div>
         )
     }
