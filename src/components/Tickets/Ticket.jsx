@@ -82,7 +82,6 @@ export default class Ticket extends Component {
                             />
                         </div>
                 </Form>
-                
             </div>
         )
     }
