@@ -1,5 +1,5 @@
 import React from 'react'
-import {Form, Button } from 'react-bootstrap'
+import {Button} from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheckCircle, faEdit, faSearch } from '@fortawesome/free-solid-svg-icons'
 import CustomInput from '../input/CustomInput'
@@ -23,7 +23,6 @@ const Contract = (props) => {
 
     return(
         <div className = 'contract'>
-            <Form>
                 <div className = 'contract-header'>
                     <div className = 'icon'>
                         <FontAwesomeIcon icon = {faCheckCircle} className = 'iconImage'/>
@@ -86,7 +85,6 @@ const Contract = (props) => {
                 </div>
                 <hr/>
                 {connect}
-            </Form>
         </div>  
     )
 }

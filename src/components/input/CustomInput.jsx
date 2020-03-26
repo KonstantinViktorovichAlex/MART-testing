@@ -5,6 +5,8 @@ const CustomInput = (props) => {
 
     const {label, controlId, control, options, width, classes, change} = props
 
+    
+
     if (control === 'text'){
         return(
             <Form.Group>
