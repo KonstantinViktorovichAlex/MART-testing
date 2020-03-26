@@ -1,13 +1,11 @@
 import React from 'react'
-import {Form} from 'react-bootstrap'
-
 import CustomInput from '../../../input/CustomInput'
+
 import './contractConnectIPoE.css'
 
 const ContractConnectIPoE = () => {
     return(
         <div className = 'contractIPoE'>
-            <Form className = 'contractIPoEForm'>
                 <div className = 'vlan-body'>
                     <div className = 'vlan'>
                         <CustomInput
@@ -57,7 +55,6 @@ const ContractConnectIPoE = () => {
                         />  
                     </div>
                 </div>
-            </Form>
         </div>
     )
 }

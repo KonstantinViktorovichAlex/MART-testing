@@ -1,12 +1,11 @@
 .contractIPoE {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     padding-left: 20px;
     padding-right: 20px;
 }
-.contractIPoEForm{
-    width: 100%;
-}
+
 .vlan-body {
     display: flex;
     width: 100%;
@@ -14,18 +13,9 @@
     justify-content: space-between;
     
 }
-.vlan {
-    margin-right: 30px;
-}
-
-.vlan > input {
-    width: 500px;
-}
-.port > input {
-    width: 500px;
-}
 
 .mac-body {
     display: flex;
     justify-content: space-between;
+    width: 100%;
 }

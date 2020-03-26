@@ -1,20 +1,19 @@
 import React from 'react'
 import {Form, Button } from 'react-bootstrap'
-import './contract.css'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCheckCircle, faEdit, faSearch } from '@fortawesome/free-solid-svg-icons'
 import CustomInput from '../input/CustomInput'
 import ContractConnectIP from './ContractConnect/IP/ContractConnectIP'
 import ContractConnectIPoE from './ContractConnect/IPoE/ContractConnectIPoE'
 import ContractConnectPPPoE from './ContractConnect/PPPoE/ContractConnectPPPoE'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCheckCircle, faEdit, faSearch } from '@fortawesome/free-solid-svg-icons'
+import './contract.css'
 
 const Contract = (props) => {
 
     let connect = null
 
-    if(props.contract === 'IP'){
+    if(props.contract === 'IP адреса'){
         connect = <ContractConnectIP/>
     }else if(props.contract === 'IPoE'){
         connect = <ContractConnectIPoE/>
@@ -27,7 +26,7 @@ const Contract = (props) => {
             <Form>
                 <div className = 'contract-header'>
                     <div className = 'icon'>
-                        <FontAwesomeIcon icon = {faCheckCircle}/>
+                        <FontAwesomeIcon icon = {faCheckCircle} className = 'iconImage'/>
                         <p>{props.contract}</p>
                     </div>
                     <div className = 'buttons-groupe'>
@@ -86,10 +85,7 @@ const Contract = (props) => {
                     </div>
                 </div>
                 <hr/>
-                {/* {connect} */}
-                {/* <ContractConnectPPPoE/> */}
-                {/* <ContractConnectIPoE/> */}
-                <ContractConnectIP/>
+                {connect}
             </Form>
         </div>  
     )

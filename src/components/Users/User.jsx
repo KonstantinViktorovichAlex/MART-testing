@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUserAlt } from '@fortawesome/free-solid-svg-icons'
 import CustomInput from '../input/CustomInput'
 
-
 import './user.css'
 
 const User = () => {

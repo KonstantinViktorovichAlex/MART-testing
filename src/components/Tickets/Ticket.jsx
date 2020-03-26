@@ -3,9 +3,10 @@ import {Form, Button } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookmark, faEdit } from '@fortawesome/free-solid-svg-icons'
 import {FormGroup, Label, Input } from 'reactstrap';
+import CustomInput from '../../components/input/CustomInput'
+
 import './ticket.css'
 
-import CustomInput from '../../components/input/CustomInput'
 export default class Ticket extends Component {
     render(){
         return(
@@ -55,6 +56,7 @@ export default class Ticket extends Component {
                                 options = {['IPoE', 'PPPoE', 'IP адреса']}
                                 width = {300}
                                 classes = {'myClass'}
+                                change = {this.props.toggleValue}
                             />
                             <CustomInput 
                                 label = 'Приоритет' 

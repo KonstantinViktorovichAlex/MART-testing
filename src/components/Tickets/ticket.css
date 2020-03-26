@@ -4,6 +4,7 @@
     border-radius: 5px;
     border:1px solid #347ab6;
 }
+
 .header {
     display: flex;
     align-items: center;
@@ -16,14 +17,17 @@
     color: white;
     margin-bottom: 25px;
 }
+
 .next {
     margin-right: 10px;
 }
+
 .header-info {
     display: flex;
     width: 150px;
     justify-content: space-between;
 }
+
 .first-groupe {
     display: flex;
     margin: 0 auto;
@@ -31,6 +35,7 @@
     padding-left: 20px;
     padding-right: 20px;
 }
+
 .second-groupe{
     display: flex;
     margin: 0 auto;
@@ -38,11 +43,13 @@
     padding-left: 20px;
     padding-right: 20px;
 }
+
 .text {
     margin: 0 auto;
     padding-left: 20px;
     padding-right: 20px;
 }
+
 #Date{
     width: 300px;
 }

@@ -3,13 +3,13 @@ import {Form} from 'react-bootstrap'
 
 const CustomInput = (props) => {
 
-    const {label, controlId, control, options, width, classes} = props
+    const {label, controlId, control, options, width, classes, change} = props
 
     if (control === 'text'){
         return(
             <Form.Group>
                 <Form.Label>{label}</Form.Label>
-                <Form.Control type="text" style = {{width: `${width}px`}} className = {classes}/>
+                <Form.Control type="text" style = {{width: `${width}px`}} className = {classes} onChange = {change}/>
             </Form.Group>
         )
     }
@@ -17,7 +17,7 @@ const CustomInput = (props) => {
         return(
             <Form.Group>
                 <Form.Label>{label}</Form.Label>
-                <Form.Control type="email" placeholder="name@example.com" style = {{width: `${width}px`}} className = {classes}/>
+                <Form.Control type="email" placeholder="name@example.com" style = {{width: `${width}px`}} className = {classes} onChange = {change}/>
             </Form.Group>
         )
     }
@@ -27,7 +27,7 @@ const CustomInput = (props) => {
         return(
             <Form.Group controlId = {controlId} >
                 <Form.Label>{label}</Form.Label>
-                <Form.Control as = {control}></Form.Control>
+                <Form.Control as = {control} onChange = {change}></Form.Control>
             </Form.Group>
         )
 
@@ -45,8 +45,8 @@ const CustomInput = (props) => {
             <Form.Group controlId = {controlId} className = {classes}>
                 <Form.Label>{label}</Form.Label>
                     {control==='select' ? 
-                        <Form.Control as = {control} style = {{width: `${width}px`}}>{option}</Form.Control> : 
-                        <Form.Control as = {control} style = {{width: `${width}px`}}></Form.Control>} 
+                        <Form.Control as = {control} style = {{width: `${width}px`}} onChange = {change}>{option}</Form.Control> : 
+                        <Form.Control as = {control} style = {{width: `${width}px`}} onChange = {change}></Form.Control>} 
 
             </Form.Group>
         )
