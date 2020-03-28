@@ -7,15 +7,14 @@ import './mainPage.css'
 class MainPage extends Component {
 
     render(){
-        const {handleClick} = this.props 
+        const {handleClick, data} = this.props 
 
         return(
             <div className = 'mainPage'>
                 <ASide handleClick = {handleClick}/>
-                <CardTicket/>
+                <CardTicket data = {data}/>
             </div>
         )
     }
-    
 }
 export default MainPage

@@ -48,7 +48,7 @@ export default class Ticket extends Component {
                                 label = 'Ответсвенный' 
                                 controlId = 'responsible' 
                                 control = 'select' 
-                                options = {['Вар1', 'Вар2', 'Вар3']}
+                                options = {['работник 1', 'работник 2', 'работник 3']}
                                 width = {300}
                                 classes = {'myClass'}
                                 change = {this.props.customValue}

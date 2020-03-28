@@ -7,17 +7,12 @@ import Contract from '../../Contract/Contract'
 
 class TicketPage extends Component {
 
-
-
     handlerSubmit = (event) => {
         event.preventDefault()
     }
 
-    
-
-
     render(){
-        const {toggleValue, contract, arrInfo} = this.props
+        const {toggleValue, contract} = this.props
         return(
             <div className = 'ticketPage'>
                 <Form onSubmit = {this.handlerSubmit}>
@@ -27,7 +22,7 @@ class TicketPage extends Component {
                         closeTicket = {this.props.closeTicket}
                     />
                     <div className = 'app-body'>
-                        <User arrInfo = {arrInfo}/>
+                        <User/>>
                         <Contract contract = {contract}/>
                     </div>
                 </Form>

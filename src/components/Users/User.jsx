@@ -6,7 +6,6 @@ import CustomInput from '../input/CustomInput'
 import './user.css'
 
 const User = (props) => {
-    console.log(props.arrInfo[0].name)
     return(
         <div className = 'user'>
             <div className = 'user-header'>

@@ -1,0 +1,9 @@
+.cardBody.full.card.border-primary {
+    height: 600px;
+}
+.body-info {
+    display: flex;
+}
+.close-info {
+    margin-top: 70px;
+}
