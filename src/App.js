@@ -80,7 +80,7 @@ class App extends Component {
 
     state = {
         showFormTickets: false,
-        da:'dddaaaaaa'
+        
     }
 
     // toggleValueType = (event) => {
@@ -101,13 +101,8 @@ class App extends Component {
         })
     }
 
-    updateState = (dd) => {
-        this.setState({da:dd})
-    }
     
-    componentDidUpdate(){
-        console.log(this.state.da)
-    }
+    
 
     render(){
 

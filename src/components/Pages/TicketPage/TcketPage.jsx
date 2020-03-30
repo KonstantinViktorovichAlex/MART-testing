@@ -60,11 +60,12 @@ class TicketPage extends Component {
         
         return(
             <div className = 'ticketPage'>
-                <Form onSubmit = {() => {this.props.updateState('noooooooo')}}>
+                <Form>
                     <Ticket 
                         toggleValue = {this.toggleValueType}
                         customValue = {this.inputsValue}
                         closeTicket = {this.props.closeTicket}
+                        handlerSubmit = {this.handlerSubmit}
                         
                     />
                     <div className = 'app-body'>
