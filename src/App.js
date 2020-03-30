@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import MainPage from './components/Pages/MainPage/MainPage'
 import TicketPage from './components/Pages/TicketPage/TcketPage'
 
-
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -81,15 +80,15 @@ class App extends Component {
 
     state = {
         showFormTickets: false,
-        contract: 'IPoE'
+        da:'dddaaaaaa'
     }
 
-    toggleValueType = (event) => {
-        this.setState({
-            contract: event.target.value
-        })
+    // toggleValueType = (event) => {
+    //     this.setState({
+    //         contract: event.target.value
+    //     })
         
-    }
+    // }
 
     addHandleTicket = () => {
         this.setState({
@@ -102,13 +101,12 @@ class App extends Component {
         })
     }
 
-    inputsValue = (event) => {
-
-        const obj = {
-            idInput : event.target.id,
-            valueInput: event.target.value
-        }
-        console.log(obj)
+    updateState = (dd) => {
+        this.setState({da:dd})
+    }
+    
+    componentDidUpdate(){
+        console.log(this.state.da)
     }
 
     render(){
@@ -118,11 +116,9 @@ class App extends Component {
                 
                 {this.state.showFormTickets === true ? 
                     <TicketPage 
-                        toggleValue = {this.toggleValueType} 
                         contract = {this.state.contract}
-                        customValue = {this.inputsValue}
                         closeTicket = {this.closeHandleTicket}
-                        
+                        updateState = {this.updateState}
                     /> : 
                     <MainPage
                         handleClick = {this.addHandleTicket}

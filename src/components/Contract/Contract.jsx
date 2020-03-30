@@ -40,15 +40,17 @@ const Contract = (props) => {
                             controlId = 'adress' 
                             control = 'text' 
                             classes = {'adresInput'}
+                            change = {props.customValue}
                         />
                     </div>
                     <div className = 'contract-number'>
                         <CustomInput
                             label = 'Номер договора' 
-                            controlId = 'contract' 
+                            controlId = 'contractNumber' 
                             control = 'text' 
                             classes = {'contractInput'}
                             width = {600}
+                            change = {props.customValue}
                         />
                         <CustomInput
                             label = 'Тариф' 
@@ -56,14 +58,16 @@ const Contract = (props) => {
                             control = 'text' 
                             classes = {'rateInput'}
                             width = {600}
+                            change = {props.customValue}
                         />
                     </div>
                     <div className = 'comments'>
                         <CustomInput
                             label = 'Комментарий' 
-                            controlId = 'comments' 
+                            controlId = 'commentsContract' 
                             control = 'text' 
                             classes = {'commentsInput'}
+                            change = {props.customValue}
                         />
                     </div>
                     <div className = 'start-end'>
@@ -73,6 +77,7 @@ const Contract = (props) => {
                             control = 'text' 
                             classes = {'startContractInput'}
                             width = {600}
+                            change = {props.customValue}
                         />
                         <CustomInput
                             label = 'Конец приостаноки' 
@@ -80,6 +85,7 @@ const Contract = (props) => {
                             control = 'text' 
                             classes = {'endContractInput'}
                             width = {600}
+                            change = {props.customValue}
                         />
                     </div>
                 </div>

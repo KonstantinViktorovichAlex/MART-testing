@@ -10,7 +10,6 @@ import './ticket.css'
 export default class Ticket extends Component {
 
 
-
     render(){
         return(
             <div className = 'ticket'>
@@ -21,7 +20,7 @@ export default class Ticket extends Component {
                         </div>
                         <div className = 'buttons-groupe'>
                             <Button variant = 'primary' className ='next'><FontAwesomeIcon icon = {faEdit}/>Следущее действие</Button>
-                            <Button variant = 'success' className = 'save'>Сохранить</Button>
+                            <Button variant = 'success' className = 'save' type = 'submit' onClick = {this.props.handlerSubmit} >Сохранить</Button>
                             <Button variant = 'danger' className = 'closeButton' onClick = {this.props.closeTicket}>Закрыть</Button>
                         </div>
                     </div>
@@ -78,7 +77,8 @@ export default class Ticket extends Component {
                                 <Input
                                     type="date"
                                     name="date"
-                                    id="Date"
+                                    id="date"
+                                    onChange = {this.props.customValue}
                                 />
                             </FormGroup>
                         </div>
@@ -88,6 +88,7 @@ export default class Ticket extends Component {
                                 controlId = 'problem' 
                                 control = 'textarea' 
                                 classes = {'textproblem'}
+                                change = {this.props.customValue}
                             />
                         </div>
             </div>

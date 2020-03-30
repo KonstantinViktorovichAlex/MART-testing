@@ -15,11 +15,11 @@ const User = (props) => {
                 <div className = 'user-body'>   
                     <CustomInput
                         label = 'ФИО' 
-                        controlId = 'Users' 
+                        controlId = 'users'
                         control = 'text' 
                         width = {300}
                         classes = {'UserClass'}
-                        
+                        change = {props.customValue}
                     />
                     <CustomInput
                         label = 'Телефон' 
@@ -27,6 +27,7 @@ const User = (props) => {
                         control = 'text' 
                         width = {300}
                         classes = {'UserClass'}
+                        change = {props.customValue}
                     />
                     <CustomInput
                         label = 'Почта' 
@@ -34,20 +35,23 @@ const User = (props) => {
                         control = 'email' 
                         width = {300}
                         classes = {'UserClass'}
+                        change = {props.customValue}
                     />
                     <CustomInput
                         label = 'Номер лицевого счета' 
-                        controlId = 'lic-number' 
+                        controlId = 'licNumber' 
                         control = 'text' 
                         width = {300}
                         classes = {'UserClass'}
+                        change = {props.customValue}
                     />
                     <CustomInput
                         label = 'Комментарий' 
-                        controlId = 'comments' 
+                        controlId = 'commentsUser' 
                         control = 'text' 
                         width = {300}
                         classes = {'UserClass'}
+                        change = {props.customValue}
                     />
                 </div>
         </div>

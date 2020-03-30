@@ -5,11 +5,9 @@ const CustomInput = (props) => {
 
     const {label, controlId, control, options, width, classes, change} = props
 
-    
-
     if (control === 'text'){
         return(
-            <Form.Group>
+            <Form.Group controlId = {controlId}>
                 <Form.Label>{label}</Form.Label>
                 <Form.Control type="text" style = {{width: `${width}px`}} className = {classes} onChange = {change}/>
             </Form.Group>
@@ -17,7 +15,7 @@ const CustomInput = (props) => {
     }
     if (control === 'email'){
         return(
-            <Form.Group>
+            <Form.Group controlId = {controlId}>
                 <Form.Label>{label}</Form.Label>
                 <Form.Control type="email" placeholder="name@example.com" style = {{width: `${width}px`}} className = {classes} onChange = {change}/>
             </Form.Group>
