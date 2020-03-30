@@ -1,5 +1,6 @@
 .mainPage{
     display: flex;
+    background-color:white;
 }
 .open{
     margin-right: 20px;

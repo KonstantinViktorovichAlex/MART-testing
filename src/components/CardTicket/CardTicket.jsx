@@ -23,9 +23,7 @@ class CardTicket extends Component {
     }
 
     render(){
-
         const {data} = this.props
-        
             return(
                 <>
                 {this.state.showFullInfo ? 
@@ -33,7 +31,7 @@ class CardTicket extends Component {
                         <div className = 'cards'>
                             {data.map((item, index) => {
                                 return(
-                                    <Card style={{ width: '18rem'  }} 
+                                    <Card style={{ width: '20rem'  }} 
                                         className = 'cardBody' 
                                         key = {index}
                                         border = 'primary'
@@ -42,22 +40,21 @@ class CardTicket extends Component {
                                             <Card.Title>Тикет №{item.id}</Card.Title> 
                                             <hr></hr>
                                             <Card.Title>Информация о тикете</Card.Title>
-                                            <Card.Subtitle className="mb-2">Источник: {item.ticketInfo.source}</Card.Subtitle>
-                                            <Card.Subtitle className="mb-2">Статус: {item.ticketInfo.status}</Card.Subtitle>
-                                            <Card.Subtitle className="mb-2">Ответственный: {item.ticketInfo.responsible}</Card.Subtitle>
-                                            <Card.Subtitle className="mb-2">Тип подключения: {item.ticketInfo.typeConnect}</Card.Subtitle>
-                                            <Card.Subtitle className="mb-2">Приоритет: {item.ticketInfo.priority}</Card.Subtitle>
-                                            <Card.Subtitle className="mb-2">Крайний срок: {item.ticketInfo.date}</Card.Subtitle>
+                                            <Card.Subtitle className="mb-2">Источник: {item.source}</Card.Subtitle>
+                                            <Card.Subtitle className="mb-2">Статус: {item.status}</Card.Subtitle>
+                                            <Card.Subtitle className="mb-2">Ответственный: {item.responsible}</Card.Subtitle>
+                                            <Card.Subtitle className="mb-2">Тип подключения: {item.typeConnect}</Card.Subtitle>
+                                            <Card.Subtitle className="mb-2">Приоритет: {item.priority}</Card.Subtitle>
+                                            <Card.Subtitle className="mb-2">Крайний срок: {item.date}</Card.Subtitle>
                                             <hr></hr>
                                             <Card.Text>
-                                                Описание проблемы: {item.ticketInfo.problem}   
+                                                Описание проблемы: {item.problem}   
                                             </Card.Text>
                                             <hr></hr>
                                                 <Button variant = 'primary'
                                                         onClick = {this.toggleShowInfo}
                                                         className = 'open'
                                                 >OPEN</Button>
-                                            <Button variant = 'danger'>DELETE</Button>
                                         </Card.Body>
                                     </Card>
                                 )

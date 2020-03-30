@@ -10,7 +10,7 @@ import ContractConnectPPPoE from './ContractConnect/PPPoE/ContractConnectPPPoE'
 import './contract.css'
 
 const Contract = (props) => {
-
+    
     let connect = null
 
     if(props.contract === 'IP адреса'){
