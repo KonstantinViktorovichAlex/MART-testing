@@ -1,12 +1,14 @@
 .user {
-    width: 550px;
+    width: auto;
     height: 650px;
     background-color: #DEF0D8;
     display: flex;
     flex-direction: column;
     margin-top: 20px;
     border: 1px solid #347ab6;
+    border-radius: 5px
 }
+
 .user-header {
     height: 60px;
     display: flex;
@@ -24,10 +26,4 @@
 .user-body {
     padding-left: 15px;
     padding-right: 15px;
-}
-.user-body > input {
-    width: 100%;
-}
-.user-body > textarea {
-    width: 100%;
 }

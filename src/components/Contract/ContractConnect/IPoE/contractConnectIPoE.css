@@ -1,49 +1,21 @@
 .contractIPoE {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
-    flex-direction: column;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
+
 .vlan-body {
     display: flex;
     width: 100%;
     margin-bottom: 20px;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-between;
     
-}
-.vlan {
-    margin-right: 30px;
-}
-
-.vlan > input {
-    width: 500px;
-}
-.port > input {
-    width: 500px;
 }
 
 .mac-body {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-.mac{
-    margin-right: 10px;
-}
-.mac > input {
-    width: 400px;
-}
-.email{
-    margin-right: 10px;
-}
-.email > input {
-    width: 400px;
-}
-.time{
-
-}
-.time > input {
-    width: 400px;
+    justify-content: space-between;
+    width: 100%;
 }
